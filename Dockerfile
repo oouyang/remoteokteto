@@ -9,13 +9,18 @@ RUN   apt update && \
       tar -xvf v1.2.0.tar.gz && \
       mkdir  /root/.vnc /run/sshd && \
       ssh-keygen -A && \
+      useradd alpine && \
+      echo alpine:$PW | chpasswd && \
       echo $PW | vncpasswd -f > /root/.vnc/passwd && \
       chmod 600 /root/.vnc/passwd && \
       cp /noVNC-1.2.0/vnc.html /noVNC-1.2.0/index.html && \
-      echo -e 'cd /root\n\
-su root -l -c 'vncserver :2000 ' \n\
-cd /noVNC-1.2.0' \n\
-./utils/launch.sh  --vnc localhost:7900 --listen 80 ' > /luo.sh && \
+      echo -e '\
+            cd /root\n\      
+            su root -l -c "vncserver :2000"  \n\
+            cd /noVNC-1.2.0 \n\
+            /usr/sbin/sshd -D & \n\
+            ./utils/launch.sh  --vnc localhost:7900 --listen 80\
+' > /luo.sh && \
       echo root:$PW|chpasswd && \
       chmod 755 /luo.sh
       
