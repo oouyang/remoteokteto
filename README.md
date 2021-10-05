@@ -6,7 +6,7 @@
 
 ![](https://img.misaka.sbs/imgs/20210919162316.png)
 
-2. 复制本项目的git地址 `https://github.com/vhqyeo50893/remoteokteto.git`
+2. 复制本项目的git地址 `https://github.com/oouyang/remoteokteto.git`
 3. 点击Git URL，粘贴git地址，点击`Deploy`
 
 ![](https://img.misaka.sbs/imgs/20210919162442.png)
@@ -15,7 +15,7 @@
 
 ![](https://img.misaka.sbs/imgs/20210919162607.png)
 
-5. 输入密码 `vhqyeo50893`
+5. 输入密码 [`changeme'](vhqyeo50893)
 
 ![](https://img.misaka.sbs/imgs/20210919162645.png)
 
